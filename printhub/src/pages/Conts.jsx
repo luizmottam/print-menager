@@ -1,7 +1,7 @@
-export default function App() {
+export default function Conts() {
   return (
     <>
-    <h1>Hello World</h1>
+    <h1>Welcome to page Cont. de Papel</h1>
     </>
   )
 }
