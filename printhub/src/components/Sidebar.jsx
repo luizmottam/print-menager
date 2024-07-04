@@ -1,39 +1,68 @@
 import { NavLink } from "react-router-dom";
+import { useRef, useState } from "react";
 import "./Sidebar.css";
 
 export default function Sidebar() {
+  const [isClosed, setIsClosed] = useState(false);
+  const sidebarRef = useRef(null);
+
+  const handleToggle = () => {
+    setIsClosed(!isClosed);
+  };
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isClosed ? 'close' : ''}`} ref={sidebarRef}>
       <nav>
         <header className="sidebar-header">
-          <div className="text header-text">
+          <div className="text logo-text">
             <span className="name">Print HUB</span>
+          </div>
+          <div className="toggle-icon" onClick={handleToggle}>
+            <img
+              src={isClosed ? 'src/assets/chevron_left.svg' : 'src/assets/chevron_right.svg'} 
+              alt="Toggle"
+            />
           </div>
         </header>
         <div className="menu-bar">
-          <ul className="menu">
-            <li>
-              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
-                <img src='src/assets/home.svg' alt="Home" />
-                <span>Home</span>
+          <ul className="menu-links">
+            <li className="nav-link">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <img src="src/assets/home.svg" alt="Home" />
+                <span className="text nav-text">Home</span>
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/cont-de-impressoras" className={({ isActive }) => isActive ? 'active' : ''}>
-                <img src='src/assets/123.svg' alt="Cont. de Papel" /> 
-                <span>Cont. de Papel</span>
+            <li className="nav-link">
+              <NavLink
+                to="/cont-de-impressoras"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <img src="src/assets/123.svg" alt="Cont. de Papel" />
+                <span className="text nav-text">Cont. de Papel</span>
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/comparador-de-meses" className={({ isActive }) => isActive ? 'active' : ''}>
-                <img src='src/assets/calendar_month.svg' alt="Comparador de Meses" />
-                <span>Comparador de Meses</span>
+            <li className="nav-link">
+              <NavLink
+                to="/comparador-de-meses"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <img
+                  src="src/assets/calendar_month.svg"
+                  alt="Comparador de Meses"
+                />
+                <span className="text nav-text">Comparador de Meses</span>
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/impressoras" className={({ isActive }) => isActive ? 'active' : ''}>
-                <img src='src/assets/print.svg' alt="Impressoras" />
-                <span>Impressoras</span>
+            <li className="nav-link">
+              <NavLink
+                to="/impressoras"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <img src="src/assets/print.svg" alt="Impressoras" />
+                <span className="text nav-text">Impressoras</span>
               </NavLink>
             </li>
           </ul>
