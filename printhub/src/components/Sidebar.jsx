@@ -31,7 +31,7 @@ export default function Sidebar() {
                 to="/"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
-                <img src="src/assets/home.svg" alt="Home" />
+                <img className="icon" src="src/assets/home.svg" alt="Home" />
                 <span className="text nav-text">Home</span>
               </NavLink>
             </li>
@@ -40,7 +40,7 @@ export default function Sidebar() {
                 to="/cont-de-impressoras"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
-                <img src="src/assets/123.svg" alt="Cont. de Papel" />
+                <img className="icon" src="src/assets/123.svg" alt="Cont. de Papel" />
                 <span className="text nav-text">Cont. de Papel</span>
               </NavLink>
             </li>
@@ -50,6 +50,7 @@ export default function Sidebar() {
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 <img
+                  className="icon" 
                   src="src/assets/calendar_month.svg"
                   alt="Comparador de Meses"
                 />
@@ -61,7 +62,7 @@ export default function Sidebar() {
                 to="/impressoras"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
-                <img src="src/assets/print.svg" alt="Impressoras" />
+                <img className="icon" src="src/assets/print.svg" alt="Impressoras" />
                 <span className="text nav-text">Impressoras</span>
               </NavLink>
             </li>
