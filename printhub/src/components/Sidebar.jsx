@@ -2,11 +2,12 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Sidebar.css";
 
-export default function Sidebar() {
-  const [isClosed, setIsClosed] = useState(false);
+export default function Sidebar({ toggleBlur }) {
+  const [isClosed, setIsClosed] = useState(true);
 
   const handleToggle = () => {
     setIsClosed(!isClosed);
+    toggleBlur();
   };
 
   return (
