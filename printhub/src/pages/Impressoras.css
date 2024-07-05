@@ -1,0 +1,48 @@
+.table-im {
+    display: flex;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    max-width: 60rem; /* Defina a largura máxima da tabela (opcional) */
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 0.5rem;
+    overflow: hidden; /* Esconder conteúdo que ultrapassa a largura */
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-bar input[type="search"],
+.search-bar select,
+.search-bar input[type="button"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar input[type="button"] {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.search-bar input[type="button"]:hover {
+    background-color: #0056b3;
+}
