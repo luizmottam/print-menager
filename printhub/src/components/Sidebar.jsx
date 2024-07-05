@@ -1,17 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./Sidebar.css";
 
 export default function Sidebar() {
   const [isClosed, setIsClosed] = useState(false);
-  const sidebarRef = useRef(null);
 
   const handleToggle = () => {
     setIsClosed(!isClosed);
   };
 
   return (
-    <aside className={`sidebar ${isClosed ? 'close' : ''}`} ref={sidebarRef}>
+    <aside className={`sidebar ${isClosed ? 'close' : ''}`}>
       <nav>
         <header className="sidebar-header">
           <div className="text logo-text">
@@ -19,7 +18,7 @@ export default function Sidebar() {
           </div>
           <div className="toggle-icon" onClick={handleToggle}>
             <img
-              src={isClosed ? 'src/assets/chevron_left.svg' : 'src/assets/chevron_right.svg'} 
+              src={isClosed ? 'src/assets/chevron_left.svg' : 'src/assets/chevron_right.svg'}
               alt="Toggle"
             />
           </div>
@@ -50,7 +49,7 @@ export default function Sidebar() {
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 <img
-                  className="icon" 
+                  className="icon"
                   src="src/assets/calendar_month.svg"
                   alt="Comparador de Meses"
                 />
