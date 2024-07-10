@@ -1,48 +1,50 @@
 .table-im {
-    display: flex;
-    margin-top: 2rem;
+  display: flex;
+  margin-top: 2rem;
 }
 
 table {
-    width: 100%;
-    max-width: 60rem; /* Defina a largura máxima da tabela (opcional) */
-    text-align: center;
-    border-collapse: collapse;
-    table-layout: fixed;
+  width: 100%;
+  max-width: 60rem; /* Defina a largura máxima da tabela (opcional) */
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-th, td {
-    padding: 0.5rem;
-    overflow: hidden; /* Esconder conteúdo que ultrapassa a largura */
-    text-overflow: ellipsis;
+th,
+td {
+  padding: 0.5rem;
+  overflow: hidden; /* Esconder conteúdo que ultrapassa a largura */
+  text-overflow: ellipsis;
+  background-color: white;
 }
 
 th {
-    background-color: black;
-    color: white;
+  text-align: left;
+  background-color: #ccd3e1;
+  color: #919191;
 }
 
 .search-bar {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .search-bar input[type="search"],
 .search-bar select,
 .search-bar input[type="button"] {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .search-bar input[type="button"] {
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
 }
 
 .search-bar input[type="button"]:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
