@@ -1,0 +1,79 @@
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar select,
+  .search-bar input[type="button"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-bar input[type="button"] {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .search-bar input[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os elementos no contêiner */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 5px;
+    width: 300px;
+    background-color: white;
+  }
+  
+  .search-container img {
+    padding-left: 10px; /* Espaçamento entre o ícone e o campo de entrada */
+  }
+  
+  .search-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    border-radius: 50px;
+  }
+  
+  .search-container button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-container button img {
+    padding-left: 10px;
+  }
+  
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: .3;
+    pointer-events: all;
+  }
+  
+  input[type="search"].dark::-webkit-search-cancel-button {
+    filter: invert(1);
+  }
