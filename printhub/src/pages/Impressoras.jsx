@@ -5,6 +5,18 @@ export default function Impressoras() {
     <>
       <h1>Impressoras</h1>
 
+      <div className="tools">
+        <div className="btn-export">
+          <span>Exportar</span>
+          <img src="..\src\assets\arrow_drop_up.svg" alt="" />
+        </div>
+
+        <ul className="list-export">
+          <li className="option-export">Excel</li>
+          <li className="option-export">PDF</li>
+        </ul>
+      </div>
+
       <div className="table-im">
         <table>
           <thead>
