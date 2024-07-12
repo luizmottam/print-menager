@@ -1,0 +1,151 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre os elementos no contêiner */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 5px;
+  width: 300px;
+  background-color: white;
+}
+
+.search-container img {
+  padding-left: 10px; /* Espaçamento entre o ícone e o campo de entrada */
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  flex: 1;
+  border-radius: 12px;
+}
+
+.search-container button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 25em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+input[type="search"].dark::-webkit-search-cancel-button {
+  filter: invert(1);
+}
+
+/* Custom dropdown styles */
+.select-menu {
+  position: relative;
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+.select-btn img {
+  transition: transform 0.3s ease;
+}
+
+.select-menu.active .select-btn img {
+  transform: rotate(180deg);
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+}
+
+.select-menu.active .options {
+  display: block;
+}
+
+.option {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f1f1f1;
+}
+
+#select-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: .375rem;
+  background-color: white;
+  padding: 4px;
+  width: 14rem;
+}
+
+#select-value {
+  color: #AFABB6;
+  font-size: 14px;
+  letter-spacing: 0.02625rem;
+}
+
+#chevrons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#chevrons {
+  color: #AFABB6;
+}
+
+.search-bar button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  text-align: center;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}

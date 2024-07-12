@@ -1,10 +1,10 @@
-import SearchBar from '../components/SearchBar'
+import SearchBar from "../components/SearchBar";
 
 export default function Comparador() {
-    return (
-      <>
+  return (
+    <>
       <h1>Comparador de Meses</h1>
-      <SearchBar/>
-      </>
-    )
-  }
+      <SearchBar />
+    </>
+  );
+}

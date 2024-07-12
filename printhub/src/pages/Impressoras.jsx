@@ -1,41 +1,35 @@
-import "./Impressoras.css";
+import React, { useState } from "react";
+import "../style/Impressoras.css";
+import ExportMenu from "../components/ExportMenu";
+import Table from "../components/Table";
+import SearchBarImpressoras from "../components/SearchBarImpressoras";
 
 export default function Impressoras() {
+  const [isMenuActive, setIsMenuActive] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Exportar");
+
+  const handleToggleMenu = () => {
+    setIsMenuActive(!isMenuActive);
+  };
+
+  const handleOptionClick = (optionText) => {
+    setSelectedOption(optionText);
+    setIsMenuActive(false);
+  };
+
   return (
     <>
       <h1>Impressoras</h1>
-
-      <div className="tools">
-        <div className="btn-export">
-          <span>Exportar</span>
-          <img src="..\src\assets\arrow_drop_up.svg" alt="" />
-        </div>
-
-        <ul className="list-export">
-          <li className="option-export">Excel</li>
-          <li className="option-export">PDF</li>
-        </ul>
+      <div className="search-imp">
+        <SearchBarImpressoras />
+        <ExportMenu
+          isMenuActive={isMenuActive}
+          selectedOption={selectedOption}
+          handleToggleMenu={handleToggleMenu}
+          handleOptionClick={handleOptionClick}
+        />
       </div>
-
-      <div className="table-im">
-        <table>
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Modelo</th>
-              <th>Usuário</th>
-              <th>IP</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <td>Compras - HP 9020 (11)</td>
-            <td>HP OfficeJet Pro 9020</td>
-            <td>Geral</td>
-            <td><a href="https://10.21.5.11">10.21.5.11</a></td>
-          </tbody>
-        </table>
-      </div>
+      <Table />
     </>
   );
 }

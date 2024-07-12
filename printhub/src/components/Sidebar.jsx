@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import "./Sidebar.css";
+import "../style/Sidebar.css";
 
 export default function Sidebar({ toggleBlur }) {
   const [isClosed, setIsClosed] = useState(true);
