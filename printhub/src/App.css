@@ -1,9 +1,0 @@
-/* Adicione esta nova regra para o fundo desfocado */
-.content {
-    margin-left: 6rem;
-    margin-top: 2rem;
-}
-
-.content.blur {
-    filter: blur(0.8px)
-}

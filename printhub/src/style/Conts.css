@@ -1,7 +1,0 @@
-table {
-    width: 100%;
-    max-width: 70rem; /* Defina a largura máxima da tabela (opcional) */
-    border-collapse: collapse;
-    table-layout: fixed;
-    text-align: center;
-  }
