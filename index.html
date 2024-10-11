@@ -6,89 +6,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/index.css" />
-
-    <title>Print Menager</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <title>PrintManager</title>
   </head>
   <body>
-    <div class="sidebar">
+    <aside class="sidebar">
       <div class="sidebar__header">
-        <h2 class="sidebar__title">PRINTMANGER</h2>
-        <img src="./IMG/dehaze.svg" alt="Toogle Menu" id="btn" />
+        <h2 class="sidebar__title">PRINTMANAGER</h2>
+        <img src="./IMG/dehaze.svg" alt="Toggle Menu" id="toggle-button" />
       </div>
-      <nav class="sidebar sidebar__navigation">
-        <ul>
+      <nav class="sidebar__navigation">
+        <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><img src="./IMG/home.svg" alt="icone de home" />
-              <span>Home</span></a
-            >
+            <a href="#" class="navigation__link">
+              <img
+                src="./IMG/home.svg"
+                alt="Home Icon"
+                class="navigation__icon"
+              />
+              <span class="navigation__text">Home</span>
+            </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><img src="./IMG/print.svg" alt="icone de impressora" /><span
-                >Impressora</span
-              ></a
-            >
+            <a href="#" class="navigation__link">
+              <img
+                src="./IMG/print.svg"
+                alt="Printer Icon"
+                class="navigation__icon"
+              />
+              <span class="navigation__text">Impressora</span>
+            </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><img src="./IMG/event.svg" alt="icone de comparar os meses" />
-              <span>Comprador de Meses</span></a
-            >
+            <a href="#" class="navigation__link">
+              <img
+                src="./IMG/event.svg"
+                alt="Monthly Comparison Icon"
+                class="navigation__icon"
+              />
+              <span class="navigation__text">Comprador de Meses</span>
+            </a>
           </li>
           <hr class="navigation__divider" />
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><img src="./IMG/notifications.svg" alt="icone de Notificações" />
-              <span>Notificações</span></a
-            >
+            <a href="#" class="navigation__link">
+              <img
+                src="./IMG/notifications.svg"
+                alt="Notifications Icon"
+                class="navigation__icon"
+              />
+              <span class="navigation__text">Notificações</span>
+            </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><img
+            <a href="#" class="navigation__link">
+              <img
                 src="./IMG/settings.svg"
-                alt="icone de configurações"
-              /><span>Configurações</span></a
-            >
+                alt="Settings Icon"
+                class="navigation__icon"
+              />
+              <span class="navigation__text">Configurações</span>
+            </a>
           </li>
         </ul>
       </nav>
-    </div>
+    </aside>
 
-    <div class="main-content">
-      <div class="container">
-        <h1>Contador de Páginas</h1>
-        <p>
-          Aqui você vai inserir autmaticamente ou manualmente as contagens de
-          papel de cada impressora
-        </p>
+    <main class="main-content">
+      <div class="main-content__container">
+        <header class="main-content__header">
+          <h1 class="main-content__title">Contador de Páginas</h1>
+          <p class="main-content__description">
+            Aqui você vai inserir automaticamente ou manualmente as contagens de
+            papel de cada impressora
+          </p>
+        </header>
 
-        <div class="bar__tool">
-          <div class="bar__tool search">
+        <div class="main-content__tools-bar">
+          <div class="tools-bar__search">
             <input
               type="search"
               name="search"
-              id=""
-              value=""
               placeholder="Pesquisa"
+              class="search-input"
             />
-            <input type="button" value="Filtrar por: " />
+            <button class="search-button">Filtrar por:</button>
           </div>
 
-          <div class="tools">
-            <input type="button" value="Cadastro Automatico" />
-            <input type="button" value="Cadastro Manual" />
-            <input type="checkbox" name="" id="" />
+          <div class="tools-bar__actions">
+            <button class="action-button">Cadastro Automático</button>
+            <button class="action-button">Cadastro Manual</button>
+            <label class="toggle-checkbox">
+              <input type="checkbox" />
+              Ativar
+            </label>
           </div>
         </div>
 
-        <div class="table">
-          <table class="table__imp">
-            <thead class="table__imp__header">
+        <section class="main-content__table-section">
+          <table class="table">
+            <thead class="table__header">
               <tr>
                 <th>Num. Registro</th>
                 <th>Impressora</th>
@@ -99,45 +119,56 @@
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="linha__primaria">
+            <tbody class="table__body">
+              <tr class="table__row table__row--primary">
                 <td># 1</td>
                 <td>Impressora IM-01</td>
-                <td><img src="IMG/print_connect.svg" alt="" /></td>
+                <td>
+                  <img
+                    src="IMG/print_connect.svg"
+                    alt="Conectado"
+                    class="table__status-icon"
+                  />
+                </td>
                 <td>Setembro</td>
                 <td>100</td>
                 <td>200</td>
                 <td>
-                  <button class="button__action">
-                    <img src="IMG/edit.svg" alt="" />
+                  <button class="table__action-button">
+                    <img src="IMG/edit.svg" alt="Editar" />
                   </button>
-                  <button class="button__action">
-                    <img src="IMG/delete.svg" alt="" />
+                  <button class="table__action-button">
+                    <img src="IMG/delete.svg" alt="Excluir" />
                   </button>
                 </td>
               </tr>
-              <tr class="linha__secundaria">
-                <td># 1</td>
-                <td>Impressora IM-01</td>
-                <td><img src="IMG/print_connect.svg" alt="" /></td>
-                <td>Setembro</td>
-                <td>100</td>
-                <td>200</td>
+              <tr class="table__row table__row--secondary">
+                <td># 2</td>
+                <td>Impressora IM-02</td>
                 <td>
-                  <button class="button__action">
-                    <img src="IMG/edit.svg" alt="" />
+                  <img
+                    src="IMG/print_connect.svg"
+                    alt="Desconectado"
+                    class="table__status-icon"
+                  />
+                </td>
+                <td>Outubro</td>
+                <td>150</td>
+                <td>250</td>
+                <td>
+                  <button class="table__action-button">
+                    <img src="IMG/edit.svg" alt="Editar" />
                   </button>
-                  <button class="button__action">
-                    <img src="IMG/delete.svg" alt="" />
+                  <button class="table__action-button">
+                    <img src="IMG/delete.svg" alt="Excluir" />
                   </button>
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
+        </section>
       </div>
-    </div>
-
+    </main>
     <script src="script.js" defer></script>
   </body>
 </html>
